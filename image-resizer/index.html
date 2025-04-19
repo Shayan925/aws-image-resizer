@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Image Uploader</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #status { margin-top: 15px; font-weight: bold; }
+        #downloadLink { display: none; margin-top: 10px; }
+        #progressBar { width: 100%; background-color: #ddd; margin-top: 10px; display: none; }
+        #progressBarInner { width: 0%; height: 20px; background-color: #4CAF50; text-align: center; line-height: 20px; color: white;}
+    </style>
+</head>
+<body>
+    <h1>Upload Image for Resizing</h1>
+
+    <form id="uploadForm">
+        <input type="file" id="imageFile" name="imageFile" accept="image/png, image/jpeg" required>
+        <button type="submit">Upload Image</button>
+    </form>
+
+    <div id="progressBar"><div id="progressBarInner">0%</div></div>
+    <div id="status"></div>
+    <a id="downloadLink" href="#" target="_blank">Download Resized Image</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
